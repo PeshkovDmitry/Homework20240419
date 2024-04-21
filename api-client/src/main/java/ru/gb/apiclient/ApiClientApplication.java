@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Перед запуском по всей видимости надо запускать сервер аутентификации
+ * См. https://www.baeldung.com/spring-security-oauth-auth-server
  */
 @SpringBootApplication
 public class ApiClientApplication {
