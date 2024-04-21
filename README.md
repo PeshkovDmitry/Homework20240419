@@ -8,4 +8,4 @@
 
 Логин: user, пароль: password
 
-На основе статьи: https://habr.com/ru/companies/otus/articles/453664/
+На основе статьи: https://www.baeldung.com/spring-security-oauth-auth-server
