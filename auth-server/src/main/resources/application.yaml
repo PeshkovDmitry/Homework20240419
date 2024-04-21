@@ -7,7 +7,7 @@ spring:
   security:
     oauth2:
       authorizationserver:
-        issuer: http://auth-server:9000
+        issuer: http://127.0.0.1:9000
         client:
           articles-client:
             registration:
