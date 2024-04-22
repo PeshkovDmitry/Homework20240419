@@ -2,12 +2,10 @@ server:
   port: 9000
 
 spring:
-  application:
-    name: auth-server
   security:
     oauth2:
       authorizationserver:
-        issuer: http://127.0.0.1:9000
+        issuer: http://auth-server:9000
         client:
           articles-client:
             registration:

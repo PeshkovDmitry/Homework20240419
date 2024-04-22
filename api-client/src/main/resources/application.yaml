@@ -24,4 +24,4 @@ spring:
             client-name: articles-client-authorization-code
         provider:
           spring:
-            issuer-uri: http://127.0.0.1:9000
+            issuer-uri: http://auth-server:9000
