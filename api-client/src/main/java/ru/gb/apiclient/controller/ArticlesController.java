@@ -15,7 +15,7 @@ public class ArticlesController {
     @Autowired
     private WebClient webClient;
 
-    @GetMapping(value = "/articles")
+    @GetMapping(value = "/")
     public String[] getArticles(
             @RegisteredOAuth2AuthorizedClient("articles-client-authorization-code") OAuth2AuthorizedClient authorizedClient
     ) {

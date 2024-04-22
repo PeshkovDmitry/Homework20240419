@@ -43,7 +43,7 @@ public class DefaultSecurityConfig {
     UserDetailsService users() {
         PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
         UserDetails user = User.builder()
-                .username("admin")
+                .username("user")
                 .password("password")
                 .passwordEncoder(encoder::encode)
                 .roles("USER")

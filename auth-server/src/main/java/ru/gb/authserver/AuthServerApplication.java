@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Сервер аутентификации
  * См. https://www.baeldung.com/spring-security-oauth-auth-server
- * Возможно он даже работает...
  */
 
 @SpringBootApplication
