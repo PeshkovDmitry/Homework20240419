@@ -13,14 +13,8 @@ public class ArticlesController {
     private final CatsService catsService;
 
     @GetMapping("/articles")
-//    public String[] getArticles() {
-//        return new String[] { "Article 1", "Article 2", "Article 3" };
-//    }
-
     public Result[] getArticles() {
         return catsService.get();
     }
-
-
 
 }

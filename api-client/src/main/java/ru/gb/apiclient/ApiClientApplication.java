@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * API клиент. Запускается последним
+ * API клиент
  * См. https://www.baeldung.com/spring-security-oauth-auth-server
  */
 
