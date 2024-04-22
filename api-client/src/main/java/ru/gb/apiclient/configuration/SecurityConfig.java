@@ -1,5 +1,11 @@
 package ru.gb.apiclient.configuration;
 
+/**
+ * Конфигурация из примера.
+ * Добавлена строка 24
+ * Изменена строка 28
+ */
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -19,7 +25,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth2Login ->
-                        oauth2Login.loginPage("/oauth2/authorization/articles-client-oidc"))
+                        oauth2Login.loginPage("/oauth2/authorization/cats-client-oidc"))
                 .oauth2Client(withDefaults());
         return http.build();
     }

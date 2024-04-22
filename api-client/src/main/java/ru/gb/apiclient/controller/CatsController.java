@@ -17,14 +17,19 @@ public class CatsController {
     @Autowired
     private WebClient webClient;
 
+    /**
+     * Формируется запрос на сервер ресурсов.
+     * Его результат добавляется в модель и передается шаблонизатору
+     */
+
     @GetMapping(value = "/")
     public String getArticles(
-            @RegisteredOAuth2AuthorizedClient("articles-client-authorization-code") OAuth2AuthorizedClient authorizedClient,
+            @RegisteredOAuth2AuthorizedClient("cats-client-authorization-code") OAuth2AuthorizedClient authorizedClient,
             Model model
     ) {
         Result[] results = this.webClient
                 .get()
-                .uri("http://127.0.0.1:8090/articles")
+                .uri("http://127.0.0.1:8090/cats")
                 .attributes(oauth2AuthorizedClient(authorizedClient))
                 .retrieve()
                 .bodyToMono(Result[].class)
@@ -32,6 +37,10 @@ public class CatsController {
         model.addAttribute("cat", results[0]);
         return "cat";
     }
+
+    /**
+     * Доступ к странице входа
+     */
 
     @GetMapping(value = "/get")
     public String getCat() {

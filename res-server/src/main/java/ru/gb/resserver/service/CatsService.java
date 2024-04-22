@@ -9,6 +9,10 @@ import ru.gb.resserver.domain.Result;
 
 import java.util.List;
 
+/**
+ * Сервис запроса ссылки на картинку из внешнего ресурса
+ */
+
 @Service
 @AllArgsConstructor
 public class CatsService {

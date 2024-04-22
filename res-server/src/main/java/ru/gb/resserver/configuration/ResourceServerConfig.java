@@ -7,15 +7,19 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
+/**
+ * Конфигурация из примера. Изменена строка 20 и 22
+ */
+
 @Configuration
 @EnableWebSecurity
 public class ResourceServerConfig {
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.securityMatcher("/articles/**")
+        http.securityMatcher("/cats/**")
                 .authorizeHttpRequests(authorize -> authorize.anyRequest()
-                        .hasAuthority("SCOPE_articles.read"))
+                        .hasAuthority("SCOPE_cats.read"))
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
         return http.build();
     }

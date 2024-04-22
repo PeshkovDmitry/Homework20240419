@@ -5,6 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * Стандартная конфигурация для запросов на внешний ресурс
+ */
+
 @Configuration
 public class GenericConfiguration {
 

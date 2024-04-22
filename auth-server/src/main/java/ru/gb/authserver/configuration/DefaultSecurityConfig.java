@@ -17,6 +17,11 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
+/**
+ * Конфигурация из примера
+ * Изменено имя пользователя в строке 51
+ */
+
 @Configuration
 @EnableWebSecurity
 public class DefaultSecurityConfig {

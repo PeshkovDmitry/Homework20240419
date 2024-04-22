@@ -8,12 +8,12 @@ import ru.gb.resserver.service.CatsService;
 
 @RestController
 @AllArgsConstructor
-public class ArticlesController {
+public class CatsController {
 
     private final CatsService catsService;
 
-    @GetMapping("/articles")
-    public Result[] getArticles() {
+    @GetMapping("/cats")
+    public Result[] getCats() {
         return catsService.get();
     }
 

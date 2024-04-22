@@ -6,22 +6,22 @@ spring:
     oauth2:
       client:
         registration:
-          articles-client-oidc:
+          cats-client-oidc:
             provider: spring
-            client-id: articles-client
+            client-id: cats-client
             client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
             scope: openid
-            client-name: articles-client-oidc
-          articles-client-authorization-code:
+            client-name: cats-client-oidc
+          cats-client-authorization-code:
             provider: spring
-            client-id: articles-client
+            client-id: cats-client
             client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "http://127.0.0.1:8080/authorized"
-            scope: articles.read
-            client-name: articles-client-authorization-code
+            scope: cats.read
+            client-name: cats-client-authorization-code
         provider:
           spring:
             issuer-uri: http://auth-server:9000
