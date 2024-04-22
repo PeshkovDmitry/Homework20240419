@@ -12,7 +12,7 @@ import ru.gb.apiclient.domain.Result;
 import static org.springframework.security.oauth2.client.web.reactive.function.client.ServerOAuth2AuthorizedClientExchangeFilterFunction.oauth2AuthorizedClient;
 
 @Controller
-public class ArticlesController {
+public class CatsController {
 
     @Autowired
     private WebClient webClient;
@@ -32,4 +32,10 @@ public class ArticlesController {
         model.addAttribute("cat", results[0]);
         return "cat";
     }
+
+    @GetMapping(value = "/get")
+    public String getCat() {
+        return "getbutton";
+    }
+
 }

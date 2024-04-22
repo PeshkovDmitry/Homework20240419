@@ -15,7 +15,8 @@ public class SecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorizeRequests ->
-                        authorizeRequests.anyRequest().authenticated()
+                        authorizeRequests.requestMatchers("/get/**", "/css/**").permitAll()
+                        .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth2Login ->
                         oauth2Login.loginPage("/oauth2/authorization/articles-client-oidc"))
