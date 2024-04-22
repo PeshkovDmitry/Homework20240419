@@ -2,6 +2,8 @@ package ru.gb.resserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 /**
  * Сервер ресурсов
@@ -9,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
+@ConfigurationPropertiesScan("ru.gb.resserver.configuration")
 public class ResServerApplication {
 
 	public static void main(String[] args) {
